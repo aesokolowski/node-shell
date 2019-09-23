@@ -2,6 +2,7 @@ let { pwd } = require('./pwd.js');
 let { ls } = require('./ls.js');
 let { cat } = require('./cat.js');
 let { curl } = require('./curl.js');
+let { echo } = require('./echo.js');
 let done;
 
 process.stdout.write('prompt > ');
@@ -14,13 +15,11 @@ process.stdin.on('data', (data) => {
   } else if (cmd === 'ls') {
     ls(done);
   } else if (cmd.slice(0, 3) === 'cat') {
-    let filename = cmd.slice(4);
-
-    cat(filename, done);
+    cat(cmd.slice(4), done);
   } else if (cmd.slice(0, 4) === 'curl') {
-    let sitename = cmd.slice(5);
-
-    curl(sitename, done);
+    curl(cmd.slice(5), done);
+  } else if (cmd.slice(0, 4) === 'echo') {
+    echo(cmd.slice(5), done);
   }
 });
 
