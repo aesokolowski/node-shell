@@ -1,13 +1,12 @@
 let request = require('request');
 
-let curl = sitename => {
+let curl = (sitename, done) => {
   request(sitename, (err, res, body) => {
     if (err) {
-      throw err;
+     done(er);
     }
 
-    process.stdout.write(body);
-    process.stdout.write('\nprompt > ');
+    done(body);
   });
 };
 

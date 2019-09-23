@@ -1,12 +1,12 @@
 let fs = require('fs');
 
-function cat(filename) {
+function cat(filename, done) {
   fs.readFile('./' + filename, 'utf8', (err, data) => {
     if (err) {
-      throw err;
+      done(err);
     }
-    process.stdout.write(data);
-    process.stdout.write('\nprompt > ');
+
+    done(data);   
   });
 }
 
