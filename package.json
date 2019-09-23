@@ -1,0 +1,22 @@
+{
+  "name": "node-shell",
+  "version": "0.0.1",
+  "description": "implementing bash features using javascript",
+  "main": "bash.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aesokolowski/node-shell.git"
+  },
+  "author": "A. Sokolowski & M. Boord",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aesokolowski/node-shell/issues"
+  },
+  "homepage": "https://github.com/aesokolowski/node-shell#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
